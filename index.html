@@ -3,21 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Velaxing - Mockup</title>
+  <title>Velaxing</title>
   <style>
     :root {
-      --bg: #f8f2ec;
-      --text: #4e3b31;
-      --muted: #6f5a50;
-      --accent: #6f8b74;
-      --accent-light: #dbc7b8;
+      --bg: #f5f0eb;
+      --text: #5a4337;
+      --muted: #7b6558;
+      --accent: #7a957f;
+      --accent-light: #e6d8cb;
       --card: #ffffff;
-      --soft: #fffaf6;
-      --border: #eee2d8;
-      --tag: #9c7b6b;
+      --soft: #faf6f2;
+      --border: #eaded4;
+      --tag: #9f866f;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Georgia, "Times New Roman", serif;
@@ -26,116 +29,142 @@
       line-height: 1.6;
     }
 
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
     .container {
-      width: min(1120px, 92%);
+      width: min(1140px, 92%);
       margin: 0 auto;
     }
 
-    section { padding: 64px 0; }
-
-    .hero {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 40px;
-      align-items: center;
+    section {
+      padding: 64px 0;
     }
 
     .eyebrow {
       text-transform: uppercase;
-      letter-spacing: 0.25em;
+      letter-spacing: 0.28em;
       color: var(--tag);
       font-size: 0.78rem;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
 
     h1, h2, h3 {
-      margin: 0 0 16px;
-      line-height: 1.15;
+      margin: 0 0 14px;
+      line-height: 1.1;
       font-weight: 600;
     }
 
-    h1 { font-size: clamp(2.3rem, 5vw, 4.5rem); }
-    h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
-    h3 { font-size: 1.25rem; }
+    h1 {
+      font-size: clamp(2.6rem, 6vw, 5.5rem);
+    }
 
-    p { margin: 0; }
+    h2 {
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+    }
 
-    .hero p.lead {
+    h3 {
+      font-size: 1.35rem;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 54px;
+      align-items: center;
+    }
+
+    .hero-logo {
+      width: 180px;
+      margin-bottom: 18px;
+    }
+
+    .lead {
       max-width: 620px;
       color: var(--muted);
       font-size: 1.08rem;
-      margin-bottom: 28px;
+      margin-top: 22px;
     }
 
     .buttons {
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
-      margin-top: 28px;
+      margin-top: 30px;
     }
 
     .btn {
       text-decoration: none;
-      padding: 14px 22px;
+      padding: 14px 24px;
       border-radius: 18px;
-      font-size: 0.95rem;
+      font-size: 0.98rem;
       display: inline-block;
       transition: transform 0.2s ease;
     }
 
-    .btn:hover { transform: translateY(-1px); }
+    .btn:hover {
+      transform: translateY(-1px);
+    }
 
     .btn-primary {
       background: var(--accent);
-      color: white;
+      color: #fff;
     }
 
     .btn-secondary {
-      background: white;
+      background: transparent;
       color: var(--text);
-      border: 1px solid #cdb6aa;
+      border: 1px solid #ccb5a5;
     }
 
     .hero-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 18px;
-    }
-
-    .panel, .card, .feature-box, .contact-box {
-      background: var(--card);
-      border-radius: 28px;
-      box-shadow: 0 10px 28px rgba(78, 59, 49, 0.06);
+      padding: 18px;
+      border: 1px solid #eee2d7;
+      border-radius: 30px;
     }
 
     .panel {
-      padding: 24px;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 10px 28px rgba(78, 59, 49, 0.06);
+      background: #fff;
     }
 
-    .panel.soft { background: #e9ddd2; }
-
-    .placeholder {
-      background: #ead9cb;
-      border-radius: 22px;
-      min-height: 220px;
-      display: grid;
-      place-items: center;
-      color: #7c6255;
-      font-size: 0.92rem;
-      text-align: center;
-      margin-bottom: 18px;
-      padding: 18px;
+    .panel.soft {
+      background: #ded1c4;
     }
 
-    .panel .small {
+    .panel-image {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+    }
+
+    .panel-content {
+      padding: 20px 22px 24px;
+    }
+
+    .small {
       color: #8b6c5d;
-      font-size: 0.88rem;
+      font-size: 0.9rem;
+      margin-bottom: 6px;
     }
 
-    .products-wrapper, .banner, .contact-section {
-      background: white;
+    .products-wrapper,
+    .banner,
+    .contact-section {
+      background: #fff;
       border-radius: 32px;
-      padding: 36px;
+      padding: 38px;
       box-shadow: 0 10px 28px rgba(78, 59, 49, 0.06);
     }
 
@@ -150,7 +179,7 @@
     .section-head p {
       color: var(--muted);
       max-width: 460px;
-      font-size: 0.95rem;
+      font-size: 0.96rem;
     }
 
     .products {
@@ -162,25 +191,30 @@
     .card {
       background: var(--soft);
       border: 1px solid var(--border);
-      padding: 20px;
+      border-radius: 26px;
+      overflow: hidden;
     }
 
-    .card .img {
-      background: #ead9cb;
-      border-radius: 20px;
-      min-height: 180px;
-      display: grid;
-      place-items: center;
-      color: #7c6255;
-      margin-bottom: 16px;
-      text-align: center;
+    .card .img-wrap {
+      background: #f1e6dc;
       padding: 18px;
+    }
+
+    .card .img-wrap img {
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+      border-radius: 18px;
+    }
+
+    .card-content {
+      padding: 18px 20px 22px;
     }
 
     .card p.note {
       color: #7a655b;
       font-size: 0.95rem;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
     .price {
@@ -204,7 +238,10 @@
     }
 
     .feature-box {
+      background: #fff;
+      border-radius: 32px;
       padding: 32px;
+      box-shadow: 0 10px 28px rgba(78, 59, 49, 0.06);
     }
 
     .benefit {
@@ -218,7 +255,7 @@
 
     .contact-section {
       background: var(--accent);
-      color: white;
+      color: #fff;
     }
 
     .contact-layout {
@@ -228,25 +265,37 @@
       align-items: center;
     }
 
-    .contact-copy p { color: rgba(255,255,255,0.9); }
+    .contact-copy p {
+      color: rgba(255,255,255,0.92);
+    }
 
     .contact-box {
       background: rgba(255,255,255,0.12);
+      border-radius: 28px;
       color: white;
       padding: 24px;
       backdrop-filter: blur(6px);
     }
 
-    .contact-box p { margin-bottom: 10px; }
-
-    footer {
-      padding: 24px 0 40px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.9rem;
+    .contact-box p {
+      margin-bottom: 10px;
     }
 
-    @media (max-width: 900px) {
+    .contact-box .btn-secondary {
+      background: #fff;
+      color: var(--text);
+      border: none;
+      margin-top: 10px;
+    }
+
+    footer {
+      padding: 26px 0 40px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 980px) {
       .hero,
       .story-grid,
       .contact-layout,
@@ -259,34 +308,49 @@
         flex-direction: column;
         align-items: start;
       }
+
+      .panel-image,
+      .card .img-wrap img {
+        height: auto;
+      }
     }
   </style>
 </head>
 <body>
+
   <section>
     <div class="container hero">
       <div>
+        <img src="Velaxing Logo.png" alt="Logo Velaxing" class="hero-logo">
+
         <div class="eyebrow">Velaxing</div>
         <h1>Candelas artesanales para transformar cualquier espacio en calma</h1>
+
         <p class="lead">
           Una propuesta visual cálida, limpia y elegante para mostrar aromas, colecciones y pedidos de una forma bonita y profesional.
         </p>
+
         <div class="buttons">
           <a href="#coleccion" class="btn btn-primary">Ver colección</a>
-          <a href="#contacto" class="btn btn-secondary">Pedir por WhatsApp</a>
+          <a href="https://wa.me/50600000000?text=Hola%2C%20me%20interesan%20las%20velas%20de%20Velaxing" class="btn btn-secondary">Pedir por WhatsApp</a>
         </div>
       </div>
 
       <div class="hero-grid">
         <div class="panel soft">
-          <div class="placeholder">Foto principal de producto</div>
-          <div class="small">Colección destacada</div>
-          <h3>Aromas de hogar</h3>
+          <img src="Calma de Lavanda.png" alt="Calma de Lavanda" class="panel-image">
+          <div class="panel-content">
+            <div class="small">Colección destacada</div>
+            <h3>Aromas de hogar</h3>
+          </div>
         </div>
+
         <div class="panel">
-          <div class="placeholder" style="background:#efe7df;">Foto estilo lifestyle</div>
-          <div class="small">Nueva temporada</div>
-          <h3>Ediciones especiales</h3>
+          <img src="Lifestyle example.png" alt="Lifestyle Velaxing" class="panel-image">
+          <div class="panel-content">
+            <div class="small">Nueva temporada</div>
+            <h3>Ediciones especiales</h3>
+          </div>
         </div>
       </div>
     </div>
@@ -299,29 +363,65 @@
           <div class="eyebrow">Productos</div>
           <h2>Velas destacadas</h2>
         </div>
-        <p>Aquí pueden ir las candelas más vendidas, con aroma, descripción corta y precio.</p>
+        <p>
+          Descubrí aromas pensados para acompañar momentos de calma, bienestar y calidez en tu hogar.
+        </p>
       </div>
 
       <div class="products">
         <div class="card">
-          <div class="img">Imagen del producto</div>
-          <h3>Calma de Lavanda</h3>
-          <p class="note">Relajante y suave, ideal para cerrar el día.</p>
-          <div class="price">₡6,500</div>
+          <div class="img-wrap">
+            <img src="Calma de Lavanda.png" alt="Calma de Lavanda">
+          </div>
+          <div class="card-content">
+            <h3>Calma de Lavanda</h3>
+            <p class="note">Un aroma suave y relajante, ideal para cerrar el día y crear un ambiente de tranquilidad.</p>
+            <div class="price">₡6,500</div>
+          </div>
         </div>
 
         <div class="card">
-          <div class="img">Imagen del producto</div>
-          <h3>Dulce Vainilla</h3>
-          <p class="note">Un aroma cálido y acogedor para el hogar.</p>
-          <div class="price">₡7,000</div>
+          <div class="img-wrap">
+            <img src="Vainilla Cremosa.png" alt="Vainilla Cremosa">
+          </div>
+          <div class="card-content">
+            <h3>Vainilla Cremosa</h3>
+            <p class="note">Cálida, dulce y acogedora. Perfecta para darle al hogar una sensación de confort.</p>
+            <div class="price">₡7,000</div>
+          </div>
         </div>
 
         <div class="card">
-          <div class="img">Imagen del producto</div>
-          <h3>Brisa Cítrica</h3>
-          <p class="note">Fresca y ligera, perfecta para renovar espacios.</p>
-          <div class="price">₡6,800</div>
+          <div class="img-wrap">
+            <img src="Brisa Citrica.png" alt="Brisa Cítrica">
+          </div>
+          <div class="card-content">
+            <h3>Brisa Cítrica</h3>
+            <p class="note">Ligera y refrescante, pensada para renovar espacios y llenarlos de energía.</p>
+            <div class="price">₡6,800</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="img-wrap">
+            <img src="Coco Tropical.png" alt="Coco Tropical">
+          </div>
+          <div class="card-content">
+            <h3>Coco Tropical</h3>
+            <p class="note">Suave y envolvente, con una vibra tropical que invita al descanso y la calidez.</p>
+            <div class="price">₡6,900</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="img-wrap">
+            <img src="Rosas.png" alt="Rosas">
+          </div>
+          <div class="card-content">
+            <h3>Rosas</h3>
+            <p class="note">Delicada y floral, ideal para crear un ambiente romántico y elegante.</p>
+            <div class="price">₡7,200</div>
+          </div>
         </div>
       </div>
     </div>
@@ -333,7 +433,7 @@
         <div class="eyebrow">Sobre la marca</div>
         <h2>Hechas con intención, aroma y detalle</h2>
         <p>
-          Este espacio puede contar la historia de Velaxing, qué hace especiales sus candelas y el tipo de experiencia que quieren transmitir: calma, bienestar y pequeños rituales cotidianos.
+          En Velaxing creamos candelas artesanales pensadas para transformar momentos cotidianos en espacios de calma. Cada aroma busca acompañar pequeños rituales de bienestar, descanso y conexión con el hogar.
         </p>
       </div>
 
@@ -352,25 +452,26 @@
     <div class="container contact-section">
       <div class="contact-layout">
         <div class="contact-copy">
-          <div class="eyebrow" style="color: rgba(255,255,255,0.8);">Pedidos y contacto</div>
+          <div class="eyebrow" style="color: rgba(255,255,255,0.85);">Pedidos y contacto</div>
           <h2>Lista para recibir pedidos</h2>
           <p>
-            Aquí se puede agregar un botón a WhatsApp, enlaces a Instagram, horarios de atención y detalles de entrega.
+            Escribinos por WhatsApp para consultar aromas disponibles, precios, regalos especiales y entregas.
           </p>
         </div>
 
         <div class="contact-box">
           <p><strong>WhatsApp:</strong> +506 0000-0000</p>
-          <p><strong>Instagram:</strong> @velaxing</p>
+          <p><strong>Instagram:</strong> @velaxingcr</p>
           <p><strong>Entregas:</strong> Coordinadas según zona</p>
-          <a href="#" class="btn btn-secondary" style="margin-top: 10px;">Hacer pedido</a>
+          <a href="https://wa.me/5068576-4015?text=Hola%2C%20me%20interesan%20las%20velas%20de%20Velaxing" class="btn btn-secondary">Hacer pedido</a>
         </div>
       </div>
     </div>
   </section>
 
   <footer>
-    Mockup inicial para Velaxing.
+    Velaxing · Candelas artesanales para momentos de calma
   </footer>
+
 </body>
 </html>
